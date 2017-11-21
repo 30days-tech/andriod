@@ -39,7 +39,6 @@ public class ValidateUtil {
 
     /**
      * 判断是否符合身份证号码的规范
-     *
      * @param idCard 身份证号码
      * @return
      */
