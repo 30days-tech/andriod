@@ -36,4 +36,18 @@ public class ValidateUtil {
         }
         return isEmail;
     }
+
+    /**
+     * 判断是否符合身份证号码的规范
+     *
+     * @param idCard 身份证号码
+     * @return
+     */
+    public static boolean isIDCard(String idCard) {
+        if (idCard != null) {
+            String IDCardRegex = "(^\\d{15}$)|(^\\d{18}$)|(^\\d{17}(\\d|X|x|Y|y)$)";
+            return idCard.matches(IDCardRegex);
+        }
+        return false;
+    }
 }
