@@ -5,6 +5,8 @@ import android.content.pm.PackageInfo;
 import android.content.pm.PackageManager;
 import android.text.TextUtils;
 import android.util.Log;
+import android.app.ActivityManager;
+import android.app.Application;
 
 import java.io.BufferedReader;
 import java.io.FileReader;
@@ -93,6 +95,7 @@ public class AppUtil {
 
     /**
      * 获取app versioncode
+     *
      * @param context
      * @return
      */
@@ -106,5 +109,29 @@ public class AppUtil {
             return 0;
         }
         return versionCode;
+    }
+
+    /**
+     * 判断APP是否在前台
+     *
+     * @param application
+     * @return
+     */
+    public static boolean isAppOnForeground(Application application) {
+        ActivityManager activityManager = (ActivityManager) application.getApplicationContext().getSystemService(
+                Context.ACTIVITY_SERVICE);
+        String packageName = application.getApplicationContext().getPackageName();
+        List<ActivityManager.RunningAppProcessInfo> appProcesses = activityManager.getRunningAppProcesses();
+        if (appProcesses == null) {
+            return false;
+        }
+        for (ActivityManager.RunningAppProcessInfo appProcess : appProcesses) {
+            if (appProcess.processName.equals(packageName)
+                    && appProcess.importance == ActivityManager.RunningAppProcessInfo.IMPORTANCE_FOREGROUND) {
+                return true;
+
+            }
+        }
+        return false;
     }
 }
