@@ -1,1 +1,11 @@
-# ±àÂë¹æ·¶AndroidÊ¹ÓÃµÄÓïÑÔÎªJava£¬×ñÑ­JavaÓïÑÔ¹æ·¶¡£ °¢Àï°Í°Í·¢²¼ÁËJava´úÂë¹æ·¶¿ª·¢ÊÖ²á£¬ android´úÂë×ñÑ­Æä¿ª·¢¹æ·¶## ¿ª·¢ÊÖ²á[°¢Àï°Í°ÍJava¿ª·¢ÊÖ²á£¨ÖÕ¼«°æ£©](https://github.com/alibaba/p3c/blob/master/%E9%98%BF%E9%87%8C%E5%B7%B4%E5%B7%B4Java%E5%BC%80%E5%8F%91%E6%89%8B%E5%86%8C%EF%BC%88%E7%BB%88%E6%9E%81%E7%89%88%EF%BC%89.pdf)## ´úÂë¹æÔ¼²å¼ş[²å¼şÊ¹ÓÃ·½·¨](https://github.com/alibaba/p3c/blob/master/idea-plugin/README_cn.md)
+# ç¼–ç è§„èŒƒ
+Androidä½¿ç”¨çš„è¯­è¨€ä¸ºJavaï¼Œéµå¾ªJavaè¯­è¨€è§„èŒƒã€‚ é˜¿é‡Œå·´å·´å‘å¸ƒäº†Javaä»£ç è§„èŒƒå¼€å‘æ‰‹å†Œï¼Œ androidä»£ç éµå¾ªå…¶å¼€å‘è§„èŒƒ
+
+## å¼€å‘æ‰‹å†Œ
+[é˜¿é‡Œå·´å·´Javaå¼€å‘æ‰‹å†Œï¼ˆç»ˆæç‰ˆï¼‰](https://github.com/alibaba/p3c/blob/master/%E9%98%BF%E9%87%8C%E5%B7%B4%E5%B7%B4Java%E5%BC%80%E5%8F%91%E6%89%8B%E5%86%8C%EF%BC%88%E7%BB%88%E6%9E%81%E7%89%88%EF%BC%89.pdf)
+
+## ä»£ç è§„çº¦æ’ä»¶
+[æ’ä»¶ä½¿ç”¨æ–¹æ³•](https://github.com/alibaba/p3c/blob/master/idea-plugin/README_cn.md)
+
+## Androidå¼€å‘è§„èŒƒèµ„æ–™
+[Androidå¼€å‘è§„èŒƒ](http://www.jianshu.com/p/99239b9c1630)
