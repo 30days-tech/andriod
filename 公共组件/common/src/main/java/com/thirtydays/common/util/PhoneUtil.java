@@ -2,6 +2,7 @@ package com.thirtydays.common.util;
 
 import android.content.Context;
 import android.util.DisplayMetrics;
+import android.telephony.TelephonyManager;
 
 /**
  * Created by chenxiaojin on 2017/10/19.
