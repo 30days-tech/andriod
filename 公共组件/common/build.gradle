@@ -29,6 +29,6 @@ dependencies {
     })
     compile 'com.android.support:appcompat-v7:26.+'
     testCompile 'junit:junit:4.12'
-    // jackson 解析json
+    // 解析json
     compile 'com.fasterxml.jackson.core:jackson-databind:2.6.3'
 }
