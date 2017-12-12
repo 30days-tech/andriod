@@ -46,7 +46,9 @@ Android Studio以module形式直接导入
             android:grantUriPermissions="true" />
             
 - 新增PushMessageHandler消息处理类继承AbstractMessageHandler
+
 - 在项目Application类中初始化推送
+
         try {
             PushManager.init(this, new PushManager.PushTokenListener() {
                 @Override
