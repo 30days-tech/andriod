@@ -5,8 +5,9 @@
 Android Studio以module形式直接导入
 
 ## 使用步骤
-  - 修改GlobalConfig.java中小米推送appid，appkey
-  - 在主项目AndroidManifest.xml添加友盟appkey、appsecret
+- 修改GlobalConfig.java中小米推送appid，appkey
+- 在主项目AndroidManifest.xml添加友盟appkey、appsecret
+
        <meta-data
             android:name="UMENG_APPKEY"
             android:value="59e89ee807fe6506df000a43" />
@@ -18,9 +19,8 @@ Android Studio以module形式直接导入
             android:name="UMENG_MESSAGE_SECRET"
             android:value="85c4004df97727d2dfcbb1c7c07a92e0" />
             
-  - 在主项目AndroidManifest.xml添加华为appid和其他配置信息
-  
-       ``
+- 在主项目AndroidManifest.xml添加华为appid和其他配置信息
+
         <meta-data
             android:name="com.huawei.hms.client.appid"
             android:value="100117231"></meta-data>
@@ -43,12 +43,9 @@ Android Studio以module形式直接导入
             android:exported="false"
             android:grantUriPermissions="true" />
             
-     ``
- - 新增PushMessageHandler消息处理类继承AbstractMessageHandler
- 
- - 在项目Application类中初始化推送
- 
-      ``
+- 新增PushMessageHandler消息处理类继承AbstractMessageHandler
+- 在项目Application类中初始化推送
+
         try {
             PushManager.init(this, new PushManager.PushTokenListener() {
                 @Override
@@ -62,10 +59,8 @@ Android Studio以module形式直接导入
             Log.i(TAG, "Init push failed. " + e.getMessage(), e);
         }
         
-      ``
-   - 在主界面添加华为推送注册失败的处理
-   
-   ``
+- 在主界面添加华为推送注册失败的处理
+
        private void registerReceiver() {
            IntentFilter refreshFilter = new IntentFilter();
            refreshFilter.addAction("HMS");
@@ -77,12 +72,10 @@ Android Studio以module形式直接导入
                LocalBroadcastManager.getInstance(this).unregisterReceiver(refreshReceiver);
            }
        }
-   ``
-   - 最后向服务器上报推送类型和推送token,并绑定token
-   
-   ``
+       
+- 最后向服务器上报推送类型和推送token,并绑定token
+
        String pushType = PushManager.getInstance().getPushTypeDesc();
        presenter.uploadPhoneInfo(userProfile.getAccountId(), pushType,
                     PushManager.getInstance().getPushToken());
        PushManager.getInstance().setPushAlias(Constant.UMENG_ALIAS_TYPE, userProfile.getAccountId() + "");
-   ``
