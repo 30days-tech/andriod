@@ -8,9 +8,8 @@ Android Studio以module形式直接导入
 
 ### 修改配置信息
   - 修改GlobalConfig.java中小米推送appid，appkey
-  
   - 在主项目AndroidManifest.xml添加友盟appkey、appsecret
-  ``
+    ``
       <meta-data
             android:name="UMENG_APPKEY"
             android:value="59e89ee807fe6506df000a43" />
@@ -65,4 +64,24 @@ Android Studio以module形式直接导入
             Log.i(TAG, "Init push failed. " + e.getMessage(), e);
         }
       ``
-   - 
+   - 在主界面添加华为推送注册失败的处理
+   ``
+       private void registerReceiver() {
+           IntentFilter refreshFilter = new IntentFilter();
+           refreshFilter.addAction("HMS");
+           LocalBroadcastManager.getInstance(this).registerReceiver(refreshReceiver, refreshFilter);
+       }
+
+       private void unRegisterReceiver() {
+           if (null != refreshReceiver) {
+               LocalBroadcastManager.getInstance(this).unregisterReceiver(refreshReceiver);
+           }
+       }
+   ``
+   - 最后向服务器上报推送类型和推送token,并绑定token
+   ``
+       String pushType = PushManager.getInstance().getPushTypeDesc();
+       presenter.uploadPhoneInfo(userProfile.getAccountId(), pushType,
+                    PushManager.getInstance().getPushToken());
+       PushManager.getInstance().setPushAlias(Constant.UMENG_ALIAS_TYPE, userProfile.getAccountId() + "");
+   ``
