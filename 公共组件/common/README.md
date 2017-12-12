@@ -12,6 +12,7 @@
 	- SpUtil:sharedpreferences操作工具类
 	- ValidateUtil:验证工具类，手机号码，邮箱，身份证是否合法
 	- ToastUtil:Toast操作工具类
+	- StringUtil:字符串工具类，判断是否为空等
 	
 
 ## 使用方法
