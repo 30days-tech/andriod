@@ -1,0 +1,64 @@
+apply plugin: 'com.android.library'
+// 谷歌推送服务, 需要在工程build.gradle的dependencies加上: classpath 'com.google.gms:google-services:3.1.0'
+// 需要在主模块的build.gradle 加上 apply plugin: 'com.google.gms.google-services'
+
+android {
+    compileSdkVersion 23
+    buildToolsVersion "25.0.2"
+
+    defaultConfig {
+        minSdkVersion 15
+        targetSdkVersion 22
+        versionCode 1
+        versionName "1.0"
+        generatedDensities = []
+        ndk{
+            abiFilters "armeabi","armeabi-v7a"
+        }
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    sourceSets {
+        main {
+            jniLibs.srcDirs = ['libs']
+        }
+
+        // Move the tests to tests/java, tests/res, etc...
+        instrumentTest.setRoot('tests')
+
+        // Move the build types to build-types/<type>
+        // For instance, build-types/debug/java, build-types/debug/AndroidManifest.xml, ...
+        // This moves them out of them default location under src/<type>/... which would
+        // conflict with src/ being used by the main source set.
+        // Adding new build types or product flavors should be accompanied
+        // by a similar customization.
+        debug.setRoot('build-types/debug')
+        release.setRoot('build-types/release')
+    }
+}
+
+dependencies {
+    provided fileTree(include: ['*.jar'], dir: 'libs')
+    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+    compile 'com.android.support:appcompat-v7:25.0.0'
+    compile files('libs/MiPush_SDK_Client_3_1_2.jar')
+    compile files('libs/utdid4all-1.1.5_proguard.jar')
+    compile files('libs/com.umeng.message_3.1.1.jar')
+    // jackson 解析json
+    compile 'com.fasterxml.jackson.core:jackson-databind:2.6.3'
+    compile 'com.huawei.android.hms:push:2.5.2.300'
+    // 谷歌推送
+    //    compile 'com.google.firebase:firebase-messaging:10.0.1'
+    //    compile 'com.google.android.gms:play-services-base:10.0.1'
+    //    compile 'com.google.firebase:firebase-core:10.0.1'
+    testCompile 'junit:junit:4.12'
+}

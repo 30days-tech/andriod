@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "362989663159",
+    "firebase_url": "https://microshare-70b6a.firebaseio.com",
+    "project_id": "microshare-70b6a",
+    "storage_bucket": "microshare-70b6a.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:362989663159:android:ab18b7e13fe1d021",
+        "android_client_info": {
+          "package_name": "com.thirtydays.microshare"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "362989663159-kvnf3vtor1ilotndq4g7c2ra52l2om7g.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAPeEXDQbypAp9J8T0nAi0ZAnweq_ENdtk"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

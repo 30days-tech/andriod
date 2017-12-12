@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<resources xmlns:android="http://schemas.android.com/apk/res/android" xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+	<string name="cloudpush_app_name">"推送服务"</string>
+    <string name="hwpush_goback">"后退"</string>
+    <string name="hwpush_forward">"前进"</string>
+    <string name="hwpush_refresh">"刷新"</string>
+    <string name="hwpush_collect">"收藏"</string>
+    <string name="hwpush_deltitle">"删除通知"</string>
+    <string name="hwpush_msg_collect">"通知收藏"</string>
+    <string name="hwpush_msg_favorites">通知收藏</string>
+    
+    <string name="hwpush_delete">"删除"</string>
+    <string name="hwpush_selectall">"全选"</string>
+    
+    <string name="hwpush_collect_tip">"点击收藏后，将在桌面自动生成一个“通知收藏”的图标，以后可从桌面直接点击查看。"</string>
+    <string name="hwpush_collect_tip_known">"知道了"</string>
+
+	<string name="hwpush_cancel">"取消"</string>
+    <plurals name="hwpush_delete_tip">
+        <!--  The example of %d is 12-->
+        <item quantity="other">"是否删除所选通知？"</item>
+    </plurals>
+	<string name="hwpush_unselectall">"取消全选"</string>
+	<string name="hwpush_no_collection">"没有通知收藏"</string>
+	<string name="hwpush_richmedia">"富媒体"</string>
+	<string name="hwpush_loading_title">"正在加载，请稍候..."</string>
+	<string name="hwpush_dialog_limit_title">"收藏已达上限"</string>
+	<string name="hwpush_dialog_limit_message">"已收藏 1000 条通知信息，需要删除部分通知才能继续收藏，是否继续？"</string>
+	<string name="hwpush_dialog_limit_ok">"继续"</string>
+    <string name="hwpush_request_provider_permission">存储消息</string>
+
+
+    <!--图片选择-->
+    <string name="all_image">所有图片</string>
+    <string name="picture">图片</string>
+    <string name="take_picture">拍摄照片</string>
+    <string name="preview">预览</string>
+    <string name="preview_num">预览(%1$s)</string>
+    <string name="choose">选择</string>
+    <string name="done">完成</string>
+    <string name="use">使用</string>
+    <string name="done_num">(%1$s/%2$s)</string>
+    <string name="num_postfix">%1$s张</string>
+    <string name="message_max_num">你最多可以选择%1$s张图片</string>
+    <string name="save_ing">保存图片中…</string>
+    <string name="num_count">(%1$s)</string>
+</resources>
