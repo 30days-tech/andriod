@@ -7,6 +7,11 @@
 	- SystemBarHelper: 沉浸式状态栏工具类， 适配4.4及以上版本
 	- CollectionUtil: 集合工具类， 判断集合是否为空、排序等
 	- MD5Util : md5加密工具类，支持字符、文件
+	- FileUtil:文件操作工具类，新增、删除
+	- JsonUtil:Json数据封装与解析工具类
+	- SpUtil:sharedpreferences操作工具类
+	- ValidateUtil:验证工具类，手机号码，邮箱，身份证是否合法
+	- ToastUtil:Toast操作工具类
 	
 
 ## 使用方法
