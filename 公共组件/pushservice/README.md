@@ -24,7 +24,8 @@ Android Studio以module形式直接导入
 
         <meta-data
             android:name="com.huawei.hms.client.appid"
-            android:value="100117231"></meta-data>
+            android:value="100117231">
+        </meta-data>
         <activity
             android:name="com.huawei.hms.activity.BridgeActivity"
             android:configChanges="orientation|locale|screenSize|layoutDirection|fontScale"
@@ -37,15 +38,17 @@ Android Studio以module形式直接导入
                 android:value="androidhwext:style/Theme.Emui.Translucent" />
         </activity>
 
-      
+       <!--com.thirtydays.library”用实际的应用包名替换-->
         <provider
             android:name="com.huawei.hms.update.provider.UpdateProvider"
-            android:authorities="com.thirtydays.library.hms.update.provider"  <!--com.thirtydays.library”用实际的应用包名替换-->
+            android:authorities="com.thirtydays.library.hms.update.provider"  
             android:exported="false"
             android:grantUriPermissions="true" />
             
 - 新增PushMessageHandler消息处理类继承AbstractMessageHandler
+
 - 在项目Application类中初始化推送
+
         try {
             PushManager.init(this, new PushManager.PushTokenListener() {
                 @Override
