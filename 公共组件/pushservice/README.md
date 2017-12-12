@@ -5,8 +5,6 @@
 Android Studio以module形式直接导入
 
 ## 使用步骤
-
-### 修改配置信息
   - 修改GlobalConfig.java中小米推送appid，appkey
   - 在主项目AndroidManifest.xml添加友盟appkey、appsecret
     ``
@@ -50,6 +48,7 @@ Android Studio以module形式直接导入
             
      ``
  - 新增PushMessageHandler消息处理类继承AbstractMessageHandler
+ 
  - 在项目Application类中初始化推送
  
       ``
