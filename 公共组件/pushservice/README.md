@@ -26,7 +26,6 @@ Android Studio以module形式直接导入
             android:name="com.huawei.hms.client.appid"
             android:value="100117231">
         </meta-data>
-        
         <activity
             android:name="com.huawei.hms.activity.BridgeActivity"
             android:configChanges="orientation|locale|screenSize|layoutDirection|fontScale"
@@ -59,9 +58,7 @@ Android Studio以module形式直接导入
             PushManager.getInstance().setMessageHandler(new PushMessageHandler());
         } catch (Throwable e) {
             Log.i(TAG, "Init push failed. " + e.getMessage(), e);
-        }
-        
-        
+        } 
 - 在主界面添加华为推送注册失败的处理
 
        private void registerReceiver() {
