@@ -9,7 +9,7 @@ Android Studio以module形式直接导入
 ### 修改配置信息
   - 修改GlobalConfig.java中小米推送appid，appkey
   
-  - 在主项目AndroidManifest.xml添加友盟appkey、appsecret，华为appid
+  - 在主项目AndroidManifest.xml添加友盟appkey、appsecret
       <meta-data
             android:name="UMENG_APPKEY"
             android:value="59e89ee807fe6506df000a43" />
@@ -26,5 +26,29 @@ Android Studio以module形式直接导入
         <meta-data
             android:name="com.huawei.hms.client.appid"
             android:value="100117231"></meta-data>
+            
+   - 在主项目AndroidManifest.xml添加华为appid和其他配置信息
+      <meta-data
+            android:name="com.huawei.hms.client.appid"
+            android:value="100117231"></meta-data>
+
+        <activity
+            android:name="com.huawei.hms.activity.BridgeActivity"
+            android:configChanges="orientation|locale|screenSize|layoutDirection|fontScale"
+            android:excludeFromRecents="true"
+            android:exported="false"
+            android:hardwareAccelerated="true"
+            android:theme="@android:style/Theme.Translucent">
+            <meta-data
+                android:name="hwc-theme"
+                android:value="androidhwext:style/Theme.Emui.Translucent" />
+        </activity>
+
+        <!--com.thirtydays.library”用实际的应用包名替换-->
+        <provider
+            android:name="com.huawei.hms.update.provider.UpdateProvider"
+            android:authorities="com.thirtydays.library.hms.update.provider"
+            android:exported="false"
+            android:grantUriPermissions="true" />
 
   
