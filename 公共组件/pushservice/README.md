@@ -1,13 +1,30 @@
-# 公共模块
-整理常用工具类， 如获取版本号、检测apk是否安装、app是否在前台等
-
-## 部分文件说明
-	- AppUtil: app工具类，可获取app版本号，检测apk是否安装， app是否在前台等
-	- PhontUtil: 手机工具类, 可获取屏幕宽高、IMEI信息等
-	- SystemBarHelper: 沉浸式状态栏工具类， 适配4.4及以上版本
-	- CollectionUtil: 集合工具类， 判断集合是否为空、排序等
-	- MD5Util : md5加密工具类，支持字符、文件
-	
+# 推送模块
+整理友盟推送、小米推送、华为移动服务推送组件，小米手机用小米推送，华为手机用华为推送，其他手机用友盟推送
 
 ## 使用方法
 Android Studio以module形式直接导入
+
+## 使用步骤
+
+### 修改配置信息
+  - 修改GlobalConfig.java中小米推送appid，appkey
+  - 在主项目AndroidManifest.xml添加友盟appkey、appsecret，华为appid
+  **
+      <meta-data
+            android:name="UMENG_APPKEY"
+            android:value="59e89ee807fe6506df000a43" />
+        <meta-data
+            android:name="UMENG_CHANNEL"
+            android:value="${UMENG_CHANNEL_VALUE}" />
+
+        <!-- 友盟推送 v3.0.5 -07d5da4d5dfd380a5bc68a149d1ef408-->
+        <meta-data
+            android:name="UMENG_MESSAGE_SECRET"
+            android:value="85c4004df97727d2dfcbb1c7c07a92e0" />
+
+        <!-- 华为HMS-PUSH-->
+        <meta-data
+            android:name="com.huawei.hms.client.appid"
+            android:value="100117231"></meta-data>
+  **
+  
