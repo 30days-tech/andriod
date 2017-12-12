@@ -6,6 +6,7 @@ Android Studio以module形式直接导入
 
 ## 使用步骤
 - 修改GlobalConfig.java中小米推送appid，appkey
+
 - 在主项目AndroidManifest.xml添加友盟appkey、appsecret
 
        <meta-data
