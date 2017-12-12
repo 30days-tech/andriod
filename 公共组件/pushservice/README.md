@@ -47,9 +47,9 @@ Android Studio以module形式直接导入
             
 - 新增PushMessageHandler消息处理类继承AbstractMessageHandler
 - 在项目Application类中初始化推送
+``
 
-        try {
-  
+       try {
             PushManager.init(this, new PushManager.PushTokenListener() {
                 @Override
                 public void onPushTokenChanged(int pushType, String token) {
@@ -61,7 +61,8 @@ Android Studio以module形式直接导入
         } catch (Throwable e) {
               Log.i(TAG, "Init push failed. " + e.getMessage(), e);
         } 
-
+        
+``
 - 在主界面添加华为推送注册失败的处理
 
        private void registerReceiver() {
