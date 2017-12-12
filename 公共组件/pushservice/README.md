@@ -7,20 +7,17 @@ Android Studio以module形式直接导入
 ## 使用步骤
   - 修改GlobalConfig.java中小米推送appid，appkey
   - 在主项目AndroidManifest.xml添加友盟appkey、appsecret
-    ``
-      <meta-data
+       <meta-data
             android:name="UMENG_APPKEY"
             android:value="59e89ee807fe6506df000a43" />
         <meta-data
             android:name="UMENG_CHANNEL"
             android:value="${UMENG_CHANNEL_VALUE}" />
-
         <!-- 友盟推送 v3.1.1 -07d5da4d5dfd380a5bc68a149d1ef408-->
         <meta-data
             android:name="UMENG_MESSAGE_SECRET"
             android:value="85c4004df97727d2dfcbb1c7c07a92e0" />
-    ``
-    
+            
   - 在主项目AndroidManifest.xml添加华为appid和其他配置信息
   
        ``
