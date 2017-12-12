@@ -38,7 +38,7 @@ Android Studio以module形式直接导入
                 android:name="hwc-theme"
                 android:value="androidhwext:style/Theme.Emui.Translucent" />
         </activity>
-       <!--com.thirtydays.library”用实际的应用包名替换-->
+        <!--com.thirtydays.library”用实际的应用包名替换-->
         <provider
             android:name="com.huawei.hms.update.provider.UpdateProvider"
             android:authorities="com.thirtydays.library.hms.update.provider"  
@@ -46,21 +46,20 @@ Android Studio以module形式直接导入
             android:grantUriPermissions="true" />
             
 - 新增PushMessageHandler消息处理类继承AbstractMessageHandler
-
 - 在项目Application类中初始化推送
-
-        try {
-            PushManager.init(this, new PushManager.PushTokenListener() {
-                @Override
-                public void onPushTokenChanged(int pushType, String token) {
-                    Log.e(TAG, "[onPushTokenChanged] pushType:" + pushType + ", token:" + token);
-                }
-            });
-            PushManager.getInstance().setDebug(isDev);
-            PushManager.getInstance().setMessageHandler(new PushMessageHandler());
-        } catch (Throwable e) {
-            Log.i(TAG, "Init push failed. " + e.getMessage(), e);
-        } 
+``
+``        try {
+``            PushManager.init(this, new PushManager.PushTokenListener() {
+``                @Override
+``                public void onPushTokenChanged(int pushType, String token) {
+``                    Log.e(TAG, "[onPushTokenChanged] pushType:" + pushType + ", token:" + token);
+``               }
+``            });
+``            PushManager.getInstance().setDebug(isDev);
+``            PushManager.getInstance().setMessageHandler(new PushMessageHandler());
+``        } catch (Throwable e) {
+``            Log.i(TAG, "Init push failed. " + e.getMessage(), e);
+``        } 
         
 - 在主界面添加华为推送注册失败的处理
 
